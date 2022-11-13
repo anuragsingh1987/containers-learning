@@ -127,3 +127,18 @@ docker image inspect <image>: Displays image data.
 docker login --username=<username>: Log in to your Docker account on the CLI.
 docker tag <image> <username>/<reponame>: Tag the image with the repo name.
 docker push <username>/<reponame>: Push the image to Docker Hub.
+
+  Dockerfiles are built using a series of instructions, dictated by set keywords:
+All Dockerfiles start with FROM.
+RUN runs commands on the shell.
+WORKDIR sets the working directory.
+COPY copies files.
+ADD also copies files, but can copy files from outside URLs.
+ADD uses more resources.
+We should use COPY when possible.
+USER sets the working user.
+EXPOSE exposes the container port.
+CMD is the final command in the Dockerfile and is the command run after the container is launched.
+See a full list of instructions. (https://docs.docker.com/engine/reference/builder/)
+docker build <dockerfile> builds the image.
+-t: Set a name; we should use <username>:<imagename> if using the Docker Hub.  
