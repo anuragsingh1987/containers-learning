@@ -115,5 +115,15 @@ docker commit <container> <image-name>: Create an image of an existing container
 docker run -p <host_port>:<container_port> <container>: Publish to host port
 
 
+docker pull <image>: Pulls down an image; this happens automatically when no image is available during docker run.
+docker image ls: Lists all Docker images.
+--no-trunc shows the full ID.
+docker image rm <image>: Removes an image.
+docker image prune: Removes all dangling images.
+-a: Removes all images not being used by a container.
+docker image inspect <image>: Displays image data.
 
 
+docker login --username=<username>: Log in to your Docker account on the CLI.
+docker tag <image> <username>/<reponame>: Tag the image with the repo name.
+docker push <username>/<reponame>: Push the image to Docker Hub.
