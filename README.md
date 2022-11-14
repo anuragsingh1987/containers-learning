@@ -54,6 +54,8 @@ docker run -dt --name bg-container --restart on-failure alpine
 default
 docker run -dt --name bg-container --restart no alpine
 
+
+
 remove containers
 docker run -it --name rm-test --rm alpine
 
@@ -78,9 +80,7 @@ docker container start a-container
 docker exec a-container apk add nginx
 
 docker exec -it <container> <shell>
-docker exec -it a-container ash      <--- For Alpine
-docker exec -it a-container bash      <--- For Ubuntu
-
+docker exec -it a-container ash
 docker exec a-container cat /etc/nginx/conf.d/default.conf
 docker start <container>: Start a container
 -i: Attach to STDOUT
