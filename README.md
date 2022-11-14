@@ -1,31 +1,25 @@
-# containers-learning
+# Containers - Learning
 
+Docker Installation 
 sudo apt update
-And then install any prerequisite packages.
-
 sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-Note that many of these packages are already installed on our Playground server.
 
-We can now add Docker's GPG key.
-
+Add GPG key.
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-And verify its configuration.
 
+Verify 
 sudo apt-key fingerprint 0EBFCD88
-To add the Docker repository, we now just need to run:
 
+Add Docker repo
 sudo add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-And update our server again.
-
 sudo apt update
-We can now install the necessary packages.
 
+Install other packages
 sudo apt install docker-ce docker-ce-cli containerd.io
-To finish up, we want to add our cloud_user user to the docker group.
 
+To finish up, we want to add our cloud_user user to the docker group.
 sudo usermod cloud_user -aG docker
 Log out then log back in to refresh the Bash session before running any docker commands.
-
 
 
 docker run hello-world
