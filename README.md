@@ -1,7 +1,9 @@
 # Containers - Learning
 
 Docker Installation
+
 sudo apt update
+
 sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 
 Add GPG key.
@@ -85,9 +87,9 @@ docker cp <source> <container>:<destination>: Copy a file to the container
 
 # Container Management 
 docker stop <container>: Stop a container
-
+  
 docker restart <container>: Restart a container
-
+  
 docker rm <container>: Remove a container (more than one container can be specified)
 
 docker container prune: Remove all stopped containers
